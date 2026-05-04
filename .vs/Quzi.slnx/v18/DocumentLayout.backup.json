@@ -1,0 +1,379 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Digi Coders\\API Data\\Quzi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\views\\quzi\\all_review.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\views\\quzi\\all_review.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\controllers\\quzicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\controllers\\quzicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\controllers\\studentmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\controllers\\studentmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\views\\studentmaster\\studentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\views\\studentmaster\\studentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\models\\quzi_add_q.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\models\\quzi_add_q.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\views\\quzi\\studentquiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\views\\quzi\\studentquiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\views\\shared\\_quiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\views\\shared\\_quiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\views\\studentmaster\\stu_login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\views\\studentmaster\\stu_login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\views\\shared\\_student.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\views\\shared\\_student.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\views\\quzi\\adminquiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\views\\quzi\\adminquiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\models\\studentlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\models\\studentlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\views\\studentmaster\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\views\\studentmaster\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\models\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\models\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\views\\quzi\\all_q_quiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\views\\quzi\\all_q_quiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\migrations\\20260428101814_quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\migrations\\20260428101814_quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\views\\quzi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\views\\quzi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\wwwroot\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\wwwroot\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|d:\\digi coders\\api data\\quzi\\quzi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6342D654-12EF-8AC0-608E-B2B80DBF841B}|Quzi\\Quzi.csproj|solutionrelative:quzi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 17,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Stu_Login.cshtml",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\StudentMaster\\Stu_Login.cshtml",
+              "RelativeDocumentMoniker": "Quzi\\Views\\StudentMaster\\Stu_Login.cshtml",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\StudentMaster\\Stu_Login.cshtml",
+              "RelativeToolTip": "Quzi\\Views\\StudentMaster\\Stu_Login.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAE4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T07:33:03.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Student.cshtml",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Shared\\_Student.cshtml",
+              "RelativeDocumentMoniker": "Quzi\\Views\\Shared\\_Student.cshtml",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Shared\\_Student.cshtml",
+              "RelativeToolTip": "Quzi\\Views\\Shared\\_Student.cshtml",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T07:15:13.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentList.cshtml",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\StudentMaster\\StudentList.cshtml",
+              "RelativeDocumentMoniker": "Quzi\\Views\\StudentMaster\\StudentList.cshtml",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\StudentMaster\\StudentList.cshtml",
+              "RelativeToolTip": "Quzi\\Views\\StudentMaster\\StudentList.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T05:13:26.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StudentList.cs",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Models\\StudentList.cs",
+              "RelativeDocumentMoniker": "Quzi\\Models\\StudentList.cs",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Models\\StudentList.cs",
+              "RelativeToolTip": "Quzi\\Models\\StudentList.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAqwBoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T04:44:21.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\StudentMaster\\Index.cshtml",
+              "RelativeDocumentMoniker": "Quzi\\Views\\StudentMaster\\Index.cshtml",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\StudentMaster\\Index.cshtml",
+              "RelativeToolTip": "Quzi\\Views\\StudentMaster\\Index.cshtml",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAIwJkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T04:38:28.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentMasterController.cs",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Controllers\\StudentMasterController.cs",
+              "RelativeDocumentMoniker": "Quzi\\Controllers\\StudentMasterController.cs",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Controllers\\StudentMasterController.cs",
+              "RelativeToolTip": "Quzi\\Controllers\\StudentMasterController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T04:38:14.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20260428101814_quiz.cs",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Migrations\\20260428101814_quiz.cs",
+              "RelativeDocumentMoniker": "Quzi\\Migrations\\20260428101814_quiz.cs",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Migrations\\20260428101814_quiz.cs",
+              "RelativeToolTip": "Quzi\\Migrations\\20260428101814_quiz.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwAcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T10:18:15.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\appsettings.json",
+              "RelativeDocumentMoniker": "Quzi\\appsettings.json",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\appsettings.json",
+              "RelativeToolTip": "Quzi\\appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-28T10:13:05.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Quzi_Add_Q.cs",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Models\\Quzi_Add_Q.cs",
+              "RelativeDocumentMoniker": "Quzi\\Models\\Quzi_Add_Q.cs",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Models\\Quzi_Add_Q.cs",
+              "RelativeToolTip": "Quzi\\Models\\Quzi_Add_Q.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T10:07:39.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DatabaseConnection.cs",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Models\\DatabaseConnection.cs",
+              "RelativeDocumentMoniker": "Quzi\\Models\\DatabaseConnection.cs",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Models\\DatabaseConnection.cs",
+              "RelativeToolTip": "Quzi\\Models\\DatabaseConnection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T10:05:07.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Quiz.cshtml",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Shared\\_Quiz.cshtml",
+              "RelativeDocumentMoniker": "Quzi\\Views\\Shared\\_Quiz.cshtml",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Shared\\_Quiz.cshtml",
+              "RelativeToolTip": "Quzi\\Views\\Shared\\_Quiz.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFQAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-28T09:59:02.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Quzi\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Quzi\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-28T09:56:43.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Quzi\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Quzi\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-28T09:55:51.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Quzi\\Index.cshtml",
+              "RelativeDocumentMoniker": "Quzi\\Views\\Quzi\\Index.cshtml",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Quzi\\Index.cshtml",
+              "RelativeToolTip": "Quzi\\Views\\Quzi\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-28T09:52:08.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Program.cs",
+              "RelativeDocumentMoniker": "Quzi\\Program.cs",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Program.cs",
+              "RelativeToolTip": "Quzi\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T09:50:21.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "script.js",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\wwwroot\\js\\script.js",
+              "RelativeDocumentMoniker": "Quzi\\wwwroot\\js\\script.js",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\wwwroot\\js\\script.js",
+              "RelativeToolTip": "Quzi\\wwwroot\\js\\script.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-28T09:48:08.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "All_Review.cshtml",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Quzi\\All_Review.cshtml",
+              "RelativeDocumentMoniker": "Quzi\\Views\\Quzi\\All_Review.cshtml",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Quzi\\All_Review.cshtml",
+              "RelativeToolTip": "Quzi\\Views\\Quzi\\All_Review.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-28T09:45:32.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "All_Q_Quiz.cshtml",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Quzi\\All_Q_Quiz.cshtml",
+              "RelativeDocumentMoniker": "Quzi\\Views\\Quzi\\All_Q_Quiz.cshtml",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Quzi\\All_Q_Quiz.cshtml",
+              "RelativeToolTip": "Quzi\\Views\\Quzi\\All_Q_Quiz.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-28T09:43:52.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminQuiz.cshtml",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Quzi\\AdminQuiz.cshtml",
+              "RelativeDocumentMoniker": "Quzi\\Views\\Quzi\\AdminQuiz.cshtml",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Quzi\\AdminQuiz.cshtml",
+              "RelativeToolTip": "Quzi\\Views\\Quzi\\AdminQuiz.cshtml",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAAAJ4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-28T09:39:17.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentQuiz.cshtml",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Quzi\\StudentQuiz.cshtml",
+              "RelativeDocumentMoniker": "Quzi\\Views\\Quzi\\StudentQuiz.cshtml",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Views\\Quzi\\StudentQuiz.cshtml",
+              "RelativeToolTip": "Quzi\\Views\\Quzi\\StudentQuiz.cshtml",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAABQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-28T09:35:39.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuziController.cs",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Controllers\\QuziController.cs",
+              "RelativeDocumentMoniker": "Quzi\\Controllers\\QuziController.cs",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Controllers\\QuziController.cs",
+              "RelativeToolTip": "Quzi\\Controllers\\QuziController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAkwC8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T09:27:03.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Quzi\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Digi Coders\\API Data\\Quzi\\Quzi\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Quzi\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T09:26:35.093Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

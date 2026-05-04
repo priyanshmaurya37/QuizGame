@@ -1,0 +1,158 @@
+@model IEnumerable<Quzi.Models.Quzi_Add_Q>
+@{
+    Layout = "_Quiz";
+    var addModel = new Quzi.Models.Quzi_Add_Q();
+}
+
+<div class="admin-container">
+
+    <!-- Add Question Form -->
+    <div class="admin-card">
+        <h2 class="admin-title"><i class="bi bi-plus-circle me-2 text-primary"></i>Add New Question</h2>
+        <form method="post" asp-action="AdminQuiz">
+            <div class="mb-3">
+                <label class="form-label">Question Text</label>
+                <textarea name="Question_Text" class="form-control" rows="3" placeholder="Enter your question here..." required></textarea>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Option A</label>
+                    <input type="text" name="Option_A" class="form-control" placeholder="Option A" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Option B</label>
+                    <input type="text" name="Option_B" class="form-control" placeholder="Option B" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Option C</label>
+                    <input type="text" name="Option_C" class="form-control" placeholder="Option C" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Option D</label>
+                    <input type="text" name="Option_D" class="form-control" placeholder="Option D" required>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Correct Answer</label>
+                    <select name="Correct_Answer" class="form-select" required>
+                        <option value="" disabled selected>Select correct option</option>
+                        <option value="Option_A">Option A</option>
+                        <option value="Option_B">Option B</option>
+                        <option value="Option_C">Option C</option>
+                        <option value="Option_D">Option D</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Target Class</label>
+                    <select name="Target_Class" class="form-select" required>
+                        <option value="" disabled selected>Select class (1-12)</option>
+                        @for (int i = 1; i <= 12; i++)
+                        {
+                            <option value="@i">Class @i</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Solution Explanation</label>
+                <textarea name="Solution_Explanation" class="form-control" rows="2" placeholder="Explain the correct answer..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary-premium btn-premium w-100 py-3">
+                <i class="bi bi-plus-circle-fill me-2"></i>Add Question to Quiz
+            </button>
+        </form>
+    </div>
+
+    @* <!-- Questions List -->
+    <div class="admin-card">
+        <h2 class="admin-title">
+            <i class="bi bi-list-ul me-2 text-primary"></i>Questions List
+            <span class="badge bg-primary ms-2">@Model.Count()</span>
+        </h2>
+
+        @if (!Model.Any())
+        {
+            <div class="text-center text-muted py-5">
+                <i class="bi bi-folder2-open display-4 d-block mb-3"></i>
+                <p class="mb-0">No questions added yet.</p>
+            </div>
+        }
+        else
+        {
+            <div class="questions-list">
+                @foreach (var q in Model.Select((item, index) => new { item, index }))
+                {
+                    <div class="question-list-item">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary me-2">#@(q.index + 1)</span>
+                            <span class="badge bg-secondary">Class @q.item.Target_Class</span>
+                        </div>
+                        <p class="fw-semibold mb-2">@q.item.Question_Text</p>
+                        <div class="row g-2 mb-2">
+                            <div class="col-6">
+                                <span class="option-badge @(q.item.Correct_Answer == "Option_A" ? "correct-opt" : "")">
+                                    <strong>A.</strong> @q.item.Option_A
+                                </span>
+                            </div>
+                            <div class="col-6">
+                                <span class="option-badge @(q.item.Correct_Answer == "Option_B" ? "correct-opt" : "")">
+                                    <strong>B.</strong> @q.item.Option_B
+                                </span>
+                            </div>
+                            <div class="col-6">
+                                <span class="option-badge @(q.item.Correct_Answer == "Option_C" ? "correct-opt" : "")">
+                                    <strong>C.</strong> @q.item.Option_C
+                                </span>
+                            </div>
+                            <div class="col-6">
+                                <span class="option-badge @(q.item.Correct_Answer == "Option_D" ? "correct-opt" : "")">
+                                    <strong>D.</strong> @q.item.Option_D
+                                </span>
+                            </div>
+                        </div>
+                        <div class="solution-info">
+                            <i class="bi bi-lightbulb-fill text-warning me-1"></i>
+                            <strong>Solution:</strong> @q.item.Solution_Explanation
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div> *@
+</div>
+
+<style>
+    .option-badge {
+        display: block;
+        padding: 0.4rem 0.75rem;
+        border-radius: 0.5rem;
+        background: #f1f5f9;
+        border: 1px solid #e2e8f0;
+        font-size: 0.9rem;
+    }
+
+    .option-badge.correct-opt {
+        background: #dcfce7;
+        border-color: #10b981;
+        color: #166534;
+        font-weight: 600;
+    }
+
+    .solution-info {
+        font-size: 0.875rem;
+        color: #64748b;
+        background: #f8fafc;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+        border-left: 3px solid #10b981;
+    }
+
+    .question-list-item {
+        border-left: 4px solid #2563eb;
+    }
+</style>

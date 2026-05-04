@@ -1,0 +1,103 @@
+@model IEnumerable<Quzi.Models.Quzi_Add_Q>
+@{
+    Layout = "_Quiz";
+}
+
+<div class="container py-4" style="max-width:860px;">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold"><i class="bi bi-list-check me-2 text-primary"></i>All Questions (Demo Mode)</h2>
+        <p class="text-muted">Showing @Model.Count() sample questions from the database</p> 
+    </div>
+
+    <div class="admin-card question-list-item mb-4 shadow-sm p-3 rounded bg-white" style="border-left: 4px solid #2563eb;">
+        @foreach(var item in Model)
+        {
+            <div class="d-flex justify-content-between mb-2">
+                <span class="badge bg-primary"></span>
+                <span class="badge bg-primary"># @item.Id</span>
+                <span class="badge bg-secondary"> Class: @item.Target_Class</span>
+            </div>
+            <p class="fw-semibold mb-3">@item.Question_Text</p>
+        
+            <div class="row g-2 mb-3">
+                <div class="col-6">
+                    <div class="p-2 rounded border @(item.Correct_Answer == "Option_A" ? "border-success bg-success bg-opacity-10 fw-bold text-success" : "border-light bg-light")">
+                        <strong>A.</strong> @item.Option_A
+                    </div>
+                    @* <div class="p-2 rounded border border-success bg-success bg-opacity-10 fw-bold text-success"> *@
+                </div>
+                <div class="col-6">
+                    
+                    <div class="p-2 rounded border @(item.Correct_Answer == "Option_B" ? "border-success bg-success bg-opacity-10 fw-bold text-success" : "border-light bg-light")">
+                        <strong>B.</strong> @item.Option_B
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-2 rounded border @(item.Correct_Answer == "Option_C" ? "border-success bg-success bg-opacity-10 fw-bold text-success" : "border-light bg-light")">
+                        <strong>C.</strong> @item.Option_C
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-2 rounded border @(item.Correct_Answer == "Option_D" ? "border-success bg-success bg-opacity-10 fw-bold text-success" : "border-light bg-light")">
+                        <strong>D.</strong> @item.Option_D
+                    </div>
+                </div>
+            </div>
+        
+            <div class="small text-muted p-2 rounded mb-4" style="background:#f8fafc; border-left:3px solid #10b981;">
+                <i class="bi bi-lightbulb-fill text-warning me-1"></i>
+                <strong>Solution:</strong>@item.Solution_Explanation
+            </div>
+        }
+    </div>
+
+</div>
+
+
+
+@* <div class="container py-4" style="max-width:860px;">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold"><i class="bi bi-list-check me-2 text-primary"></i>All Questions</h2>
+        <p class="text-muted">Total: <strong>@Model.Count()</strong> questions in database</p> 
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center py-5">
+            <i class="bi bi-clipboard-x display-4 text-muted d-block mb-3"></i>
+            <p class="text-muted">No questions found. <a asp-action="AdminQuiz">Add some questions</a>.</p>
+        </div>
+    }
+    else
+    {
+        @foreach (var q in Model.Select((item, i) => new { item, i }))
+        {
+            <div class="admin-card question-list-item mb-3" style="border-left: 4px solid #2563eb;">
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="badge bg-primary">#@(q.i + 1)</span>
+                    <span class="badge bg-secondary">Class @q.item.Target_Class</span>
+                </div>
+                <p class="fw-semibold mb-3">@q.item.Question_Text</p>
+                <div class="row g-2 mb-3">
+                    @foreach (var opt in new[] {
+                        new { Label = "A", Value = q.item.Option_A, Key = "Option_A" },
+                        new { Label = "B", Value = q.item.Option_B, Key = "Option_B" },
+                        new { Label = "C", Value = q.item.Option_C, Key = "Option_C" },
+                        new { Label = "D", Value = q.item.Option_D, Key = "Option_D" }
+                    })
+                    {
+                        <div class="col-6">
+                            <div class="p-2 rounded border @(q.item.Correct_Answer == opt.Key ? "border-success bg-success bg-opacity-10 fw-bold text-success" : "border-light bg-light")">
+                                <strong>@opt.Label.</strong> @opt.Value
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="small text-muted p-2 rounded" style="background:#f8fafc; border-left:3px solid #10b981;">
+                    <i class="bi bi-lightbulb-fill text-warning me-1"></i>
+                    <strong>Solution:</strong> @q.item.Solution_Explanation
+                </div>
+            </div>
+        }
+    }
+</div> *@

@@ -1,0 +1,380 @@
+@model IEnumerable<Quzi.Models.Quzi_Add_Q>
+@{
+    Layout = "_Quiz";
+    // Layout = "_Layout";
+}
+<div class="container py-4" style="max-width:900px;">
+    <div id="class-selection" class="text-center">
+        <h2 class="fw-bold mb-3"><i class="bi bi-mortarboard-fill me-2 text-primary"></i>Select Your Class</h2>
+        <p class="text-muted mb-4">Choose your class to start the quiz (Demo: Click Class 10)</p>
+        <div class="row g-3 justify-content-center">
+            <div class="row g-3 justify-content-center">
+                @for (int i = 1; i <= 12; i++)
+                {
+                    var classQuestions = Model.Where(q => q.Target_Class == i.ToString()).ToList();
+                    <div class="col-6 col-md-3">
+                        <button class="btn btn-outline-primary w-100 py-3 fw-bold class-btn"
+                                onclick="startQuiz('@i')"
+                            @(classQuestions.Count == 0 ? "disabled" : "")>
+                            Class @i
+                            <br><small class="text-muted">(@classQuestions.Count Q)</small>
+                        </button>
+                    </div>
+                }
+            </div>
+            @* <div class="col-6 col-md-3">
+                <button class="btn btn-outline-primary w-100 py-3 fw-bold class-btn" onclick="startQuiz('10')">
+                    Class 10
+                    <br><small class="text-muted">(3 Q)</small>
+                </button>
+            </div>
+            <div class="col-6 col-md-3">
+                <button class="btn btn-outline-primary w-100 py-3 fw-bold class-btn" disabled>
+                    Class 11
+                    <br><small class="text-muted">(0 Q)</small>
+                </button>
+            </div> *@
+        </div>
+    </div>
+
+    <div id="quiz-area" style="display:none;">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-primary px-3 py-2" id="class-badge">Class 1</span>
+            <span class="text-muted fw-semibold" id="progress-text">Question 1 of 10</span>
+        </div>
+        <div class="progress mb-4" style="height:8px;">
+            <div id="progress-bar" class="progress-bar bg-success" style="width:0%;"></div>
+        </div>
+
+        <div class="card p-4 shadow-sm border-0 mb-3">
+            <h3 class="fw-bold mb-4" id="q-text">Question text here...</h3>
+            <div id="options-container" class="d-flex flex-column gap-2"></div>
+            
+            <div class="mt-4 p-3 rounded bg-light border-start border-4 border-info" id="solution-box" style="display:none;">
+                <div class="fw-bold text-info mb-1"><i class="bi bi-lightbulb-fill me-1"></i>Explanation</div>
+                <p id="solution-text" class="mb-0 small text-muted"></p>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between mt-3">
+            <button class="btn btn-outline-secondary px-4" id="prev-btn" onclick="prevQ()" disabled>
+                <i class="bi bi-arrow-left"></i> Previous
+            </button>
+            <button class="btn btn-primary px-4" id="next-btn" onclick="nextQ()" disabled>
+                Next <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="result-area" class="text-center py-5" style="display:none;">
+        <i class="bi bi-trophy-fill display-1 text-warning mb-3"></i>
+        <h2 class="fw-bold mb-3">Quiz Completed!</h2>
+        <div class="display-4 fw-bold text-primary mb-4" id="score-display">0 / 0</div>
+        <button class="btn btn-primary btn-lg px-5" onclick="location.reload()">
+            <i class="bi bi-arrow-clockwise me-2"></i>Try Again
+        </button>
+        <a class="btn btn-secondary btn-lg px-5" asp-action="Stu_Login" asp-controller="StudentMaster">
+            <i class="bi bi-arrow-clockwise me-2"></i>Finesh
+        </a>
+    </div>
+</div>
+
+
+<script>
+    // Static Dummy Data for Demo
+     const allQuestions = [
+         
+        @foreach (var item in Model)
+        {
+                <text>
+                    {
+                        target_Class: "@item.Target_Class",
+                        question_Text: "@item.Question_Text",
+                        option_A: "@item.Option_A",
+                        option_B: "@item.Option_B",
+                        option_C: "@item.Option_C",
+                        option_D: "@item.Option_D",
+                        correct_Answer: "@item.Correct_Answer",
+                        solution_Explanation: "@item.Solution_Explanation"
+                    },
+                </text>
+        }
+    ];
+
+    let filteredQuestions = [];
+    let currentIdx = 0;
+    let score = 0;
+    let answered = [];
+
+    function startQuiz(cls) {
+        filteredQuestions = allQuestions.filter(q => q.target_Class === cls);
+        
+        document.getElementById('class-selection').style.display = 'none';
+        document.getElementById('quiz-area').style.display = 'block';
+        document.getElementById('class-badge').textContent = 'Class ' + cls;
+
+        currentIdx = 0;
+        score = 0;
+        answered = new Array(filteredQuestions.length).fill(null);
+        renderQuestion();
+    }
+
+    function renderQuestion() {
+        const q = filteredQuestions[currentIdx];
+        const total = filteredQuestions.length;
+
+        document.getElementById('q-text').textContent = q.question_Text;
+        document.getElementById('progress-text').textContent = `Question ${currentIdx + 1} of ${total}`;
+        document.getElementById('progress-bar').style.width = `${((currentIdx + 1) / total) * 100}%`;
+
+        const container = document.getElementById('options-container');
+        container.innerHTML = '';
+
+        const opts = [
+            { label: 'A', value: q.option_A, key: 'Option_A' },
+            { label: 'B', value: q.option_B, key: 'Option_B' },
+            { label: 'C', value: q.option_C, key: 'Option_C' },
+            { label: 'D', value: q.option_D, key: 'Option_D' }
+        ];
+
+        opts.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'btn btn-outline-light text-dark border p-3 text-start w-100 mb-2 d-flex align-items-center justify-content-between';
+            btn.innerHTML = `<span><strong>${opt.label}.</strong> ${opt.value}</span>`;
+            
+            // Check if already answered
+            if (answered[currentIdx] !== null) {
+                if (opt.key === q.correct_Answer) btn.classList.add('bg-success', 'text-white');
+                else if (opt.key === answered[currentIdx]) btn.classList.add('bg-danger', 'text-white');
+                btn.disabled = true;
+            } else {
+                btn.onclick = () => selectOption(opt.key);
+            }
+            container.appendChild(btn);
+        });
+
+        const solBox = document.getElementById('solution-box');
+        if (answered[currentIdx] !== null) {
+            solBox.style.display = 'block';
+            document.getElementById('solution-text').textContent = q.solution_Explanation;
+            document.getElementById('next-btn').disabled = false;
+        } else {
+            solBox.style.display = 'none';
+            document.getElementById('next-btn').disabled = true;
+        }
+
+        document.getElementById('prev-btn').disabled = currentIdx === 0;
+        document.getElementById('next-btn').innerHTML = (currentIdx === total - 1)
+            ? 'Finish <i class="bi bi-check-all"></i>'
+            : 'Next <i class="bi bi-arrow-right"></i>';
+    }
+
+    function selectOption(key) {
+        if (answered[currentIdx] !== null) return;
+        
+        answered[currentIdx] = key;
+        const q = filteredQuestions[currentIdx];
+        if (key === q.correct_Answer) score++;
+
+        renderQuestion();
+    }
+
+    function nextQ() {
+        if (currentIdx < filteredQuestions.length - 1) {
+            currentIdx++;
+            renderQuestion();
+        } else {
+            showResult();
+        }
+    }
+
+    function prevQ() {
+        if (currentIdx > 0) {
+            currentIdx--;
+            renderQuestion();
+        }
+    }
+
+    function showResult() {
+        document.getElementById('quiz-area').style.display = 'none';
+        document.getElementById('result-area').style.display = 'block';
+        document.getElementById('score-display').textContent = `${score} / ${filteredQuestions.length}`;
+    }
+</script>
+
+@* <script>
+    const allQuestions = @Html.Raw(Json.Serialize(Model));
+</script> *@
+
+
+
+
+@* <div class="container py-4" style="max-width:900px;">
+    <div id="class-selection" class="text-center">
+        <h2 class="fw-bold mb-3"><i class="bi bi-mortarboard-fill me-2 text-primary"></i>Select Your Class</h2>
+        <p class="text-muted mb-4">Choose your class to start the quiz</p>
+        <div class="row g-3 justify-content-center">
+            @for (int i = 1; i <= 12; i++)
+            {
+                var classQuestions = Model.Where(q => q.Target_Class == i.ToString()).ToList();
+                <div class="col-6 col-md-3">
+                    <button class="btn btn-outline-primary w-100 py-3 fw-bold class-btn" 
+                            onclick="startQuiz('@i')" 
+                            @(classQuestions.Count == 0 ? "disabled" : "")>
+                        Class @i
+                        <br><small class="text-muted">(@classQuestions.Count Q)</small>
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div id="quiz-area" style="display:none;">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-primary px-3 py-2" id="class-badge">Class 1</span>
+            <span class="text-muted fw-semibold" id="progress-text">Question 1 of 10</span>
+        </div>
+        <div class="progress mb-4" style="height:8px;">
+            <div id="progress-bar" class="progress-bar" style="width:0%;"></div>
+        </div>
+
+        <div class="admin-card">
+            <h3 class="fw-bold mb-4" id="q-text">Question text here...</h3>
+            <div id="options-container" class="d-flex flex-column gap-2"></div>
+            <div class="solution-box mt-3" id="solution-box">
+                <div class="solution-title"><i class="bi bi-lightbulb-fill me-1"></i>Explanation</div>
+                <p id="solution-text" class="mb-0"></p>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between mt-3">
+            <button class="btn btn-outline-primary btn-premium" id="prev-btn" onclick="prevQ()" disabled>
+                <i class="bi bi-arrow-left"></i> Previous
+            </button>
+            <button class="btn btn-primary-premium btn-premium" id="next-btn" onclick="nextQ()" disabled>
+                Next <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="result-area" class="text-center py-5" style="display:none;">
+        <i class="bi bi-trophy-fill display-1 text-warning mb-3"></i>
+        <h2 class="fw-bold mb-3">Quiz Completed!</h2>
+        <div class="display-4 fw-bold text-primary mb-4" id="score-display">0 / 0</div>
+        <button class="btn btn-primary-premium btn-premium" onclick="location.reload()">
+            <i class="bi bi-arrow-clockwise me-2"></i>Try Again
+        </button>
+    </div>
+</div>
+
+<script>
+    const allQuestions = @Html.Raw(Json.Serialize(Model));
+    let filteredQuestions = [];
+    let currentIdx = 0;
+    let score = 0;
+    let answered = [];
+
+    function startQuiz(cls) {
+        filteredQuestions = allQuestions.filter(q => q.target_Class === cls);
+        if (filteredQuestions.length === 0) {
+            alert('No questions for Class ' + cls);
+            return;
+        }
+
+        document.getElementById('class-selection').style.display = 'none';
+        document.getElementById('quiz-area').style.display = 'block';
+        document.getElementById('class-badge').textContent = 'Class ' + cls;
+
+        currentIdx = 0;
+        score = 0;
+        answered = new Array(filteredQuestions.length).fill(false);
+        renderQuestion();
+    }
+
+    function renderQuestion() {
+        const q = filteredQuestions[currentIdx];
+        const total = filteredQuestions.length;
+
+        document.getElementById('q-text').textContent = q.question_Text;
+        document.getElementById('progress-text').textContent = `Question ${currentIdx + 1} of ${total}`;
+        document.getElementById('progress-bar').style.width = `${((currentIdx + 1) / total) * 100}%`;
+
+        const container = document.getElementById('options-container');
+        container.innerHTML = '';
+
+        const opts = [
+            { label: 'A', value: q.option_A, key: 'Option_A' },
+            { label: 'B', value: q.option_B, key: 'Option_B' },
+            { label: 'C', value: q.option_C, key: 'Option_C' },
+            { label: 'D', value: q.option_D, key: 'Option_D' }
+        ];
+
+        opts.forEach(opt => {
+            const div = document.createElement('div');
+            div.className = 'option-card d-flex align-items-center';
+            div.innerHTML = `<div class="option-prefix">${opt.label}</div><div class="option-text ms-3">${opt.value}</div>`;
+            div.onclick = () => selectOption(opt.key);
+            container.appendChild(div);
+        });
+
+        const solBox = document.getElementById('solution-box');
+        const solText = document.getElementById('solution-text');
+        if (answered[currentIdx]) {
+            solBox.classList.add('show');
+            solText.textContent = q.solution_Explanation;
+            document.getElementById('next-btn').disabled = false;
+        } else {
+            solBox.classList.remove('show');
+            document.getElementById('next-btn').disabled = true;
+        }
+
+        document.getElementById('prev-btn').disabled = currentIdx === 0;
+        document.getElementById('next-btn').innerHTML = (currentIdx === total - 1) 
+            ? 'Finish <i class="bi bi-check-all"></i>' 
+            : 'Next <i class="bi bi-arrow-right"></i>';
+    }
+
+    function selectOption(key) {
+        if (answered[currentIdx]) return;
+        answered[currentIdx] = true;
+
+        const q = filteredQuestions[currentIdx];
+        const correct = q.correct_Answer;
+
+        if (key === correct) score++;
+
+        const opts = document.querySelectorAll('#options-container .option-card');
+        opts.forEach(opt => {
+            const label = opt.querySelector('.option-prefix').textContent;
+            const optKey = 'Option_' + label;
+            if (optKey === correct) opt.classList.add('correct');
+            else if (optKey === key) opt.classList.add('wrong');
+        });
+
+        document.getElementById('solution-box').classList.add('show');
+        document.getElementById('solution-text').textContent = q.solution_Explanation;
+        document.getElementById('next-btn').disabled = false;
+    }
+
+    function nextQ() {
+        if (currentIdx < filteredQuestions.length - 1) {
+            currentIdx++;
+            renderQuestion();
+        } else {
+            showResult();
+        }
+    }
+
+    function prevQ() {
+        if (currentIdx > 0) {
+            currentIdx--;
+            renderQuestion();
+        }
+    }
+
+    function showResult() {
+        document.getElementById('quiz-area').style.display = 'none';
+        document.getElementById('result-area').style.display = 'block';
+        document.getElementById('score-display').textContent = `${score} / ${filteredQuestions.length}`;
+    }
+</script> *@

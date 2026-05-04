@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Quzi.styles.css" asp-append-version="true" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <style>
+
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background: #f4f6f9;
+            }
+
+            /* Header */
+            header {
+                background: #2c3e50;
+                padding: 15px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+                header .logo {
+                    color: white;
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+
+                header nav a {
+                    color: white;
+                    text-decoration: none;
+                    margin: 0 12px;
+                    font-size: 16px;
+                    transition: 0.3s;
+                }
+
+                    header nav a:hover {
+                        color: #1abc9c;
+                    }
+
+            /* Body */
+            .container {
+                text-align: center;
+                padding: 50px 20px;
+            }
+
+                .container h1 {
+                    color: #2c3e50;
+                    margin-bottom: 20px;
+                }
+
+            .quiz-img {
+                width: 350px;
+                max-width: 90%;
+                border-radius: 12px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            }
+
+            .card {
+                background: white;
+                display: inline-block;
+                padding: 20px;
+                border-radius: 12px;
+                margin-top: 30px;
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Admin Panel</div>
+        <nav>
+            <a asp-controller="StudentMaster" asp-action="Index">Registion</a>
+            <a asp-controller="Quzi" asp-action="Index">Student List</a>
+            <a asp-controller="StudentMaster" asp-action="Stu_Login">Login</a>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
